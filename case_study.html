@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom styles that Bootstrap doesn't cover */
+
+    .case-study {
+      background-color: rgba(8, 14, 40, 1);
+      overflow: hidden;
+    }
+
+    .technology-tag {
+      border-radius: 0.1875rem;
+      background-color: rgba(89, 201, 247, 0.15);
+      padding: 0.25rem 0.75rem;
+      color: rgba(89, 201, 247, 1);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9375rem;
+    }
+
+    .tag-line {
+      border-color: rgba(89, 201, 247, 1);
+      border-style: solid;
+      border-width: 0.125rem;
+      width: 4.9375rem;
+      height: 0.125rem;
+      margin: auto 0;
+    }
+
+    .case-study-title {
+      color: rgba(206, 201, 201, 1);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .case-study-description {
+      color: rgba(87, 87, 87, 1);
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 2.1875rem;
+    }
+
+    .blue-box {
+      border-radius: 1.8125rem 0.1875rem 1.8125rem 0.1875rem;
+      background-color: rgba(90, 201, 247, 1);
+      height: 33.1875rem;
+    }
+
+    .steps-blue-box {
+      border-radius: 1.4375rem 0.1875rem 1.4375rem 0.1875rem;
+      background-color: rgba(90, 201, 247, 1);
+      height: 26.125rem;
+    }
+
+    .steps-title {
+      color: rgba(206, 201, 201, 1);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .steps-description {
+      color: rgba(87, 87, 87, 1);
+      font-size: 1.375rem;
+      font-weight: 500;
+      line-height: 2.4375rem;
+    }
+
+    .stats-number {
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(200, 200, 200, 1);
+    }
+
+    .stats-label {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: rgba(200, 200, 200, 1);
+    }
+
+    .indicator {
+      background-color: rgba(196, 196, 196, 1);
+      border-radius: 50%;
+      width: 0.5625rem;
+      height: 0.5625rem;
+    }
+
+    .indicator-active {
+      background-color: rgba(90, 201, 247, 1);
+      border-radius: 50%;
+      width: 0.5625rem;
+      height: 0.5625rem;
+    }
+
+    .footer {
+      background-color: rgba(0, 0, 0, 1);
+      padding: 3.5625rem 0;
+    }
+
+    .company-name {
+      font-size: 1.5625rem;
+      color: rgba(255, 255, 255, 1);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .footer-column-title {
+      color: #fff;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .footer-link {
+      color: #f5f7fa;
+      font-size: 0.75rem;
+      text-decoration: none;
+    }
+
+    .newsletter-placeholder {
+      color: #d9dbe1;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 991px) {
+      .stats-number {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="case-study">
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header-section">
+      <nav class="navbar navbar-expand-lg py-3 rounded-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b3c4760f9b5ae35ab5809b9b12a74131eae8d48?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="JUSTJAVA Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon light "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: white;"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Our Story</a></li>
+                  <li><a class="dropdown-item" href="#">Team</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Fintech</a></li>
+                  <li><a class="dropdown-item" href="#">Legaltech</a></li>
+                  <li><a class="dropdown-item" href="#">Automation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="case_study.html">Case Study</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="insights.html">Insights</a>
+              </li>
+            </ul>
+            <button class="btn btn-info text-dark px-4">CONTACT US</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <!-- Experience Section -->
+      <section class="container mb-5 mt-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="technology-tag">TECHNOLOGY</div>
+              <div class="tag-line"></div>
+            </div>
+            <h1 class="case-study-title mb-3">CASE STUDY 1</h1>
+            <p class="case-study-description">
+              Guiding You on Your Global Financial Success Journey Through
+              Customized & Personalized Financial Consulting Services. Achieve
+              Your Goals with Data-Driven Expertise and Secure Your Financial
+              Future, Successfully Navigating the Ever-Changing Finance
+              Guiding You on Your Global Financial Success Journey
+              ThrouAchieve Your Goals with Data-Driven Expertise and Secure
+              Your Financial F
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="blue-box mx-auto w-100"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel Section -->
+      <section class="mb-5 py-3">
+        <div id="caseStudyCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ec63c380b60c638c7f28dce24a5ba5b02de34208?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Gallery Image 1" class="img-fluid rounded" style="width: 23.75rem;" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e1a17fe8830a52fdcf6b61592f8edfa61d840f8?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Gallery Image 2" class="img-fluid rounded" style="width: 23.75rem;" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a852bb3fc217c424bf169a0803626202193e1549?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Gallery Image 3" class="img-fluid rounded" style="width: 23.75rem;" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-3 gap-2">
+            <div class="indicator"></div>
+            <div class="indicator-active"></div>
+            <div class="indicator"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps Section 1 -->
+      <section class="container mb-5">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="steps-blue-box mx-auto w-100"></div>
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h2 class="steps-title mb-3">STEPS</h2>
+            <p class="steps-description">
+              Lorem Ispim hhssosososososo
+              <br />
+              Lorem Ispim hhssosososososo
+              <br />
+              Lorem Ispim hhssosososososo
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps Section 2 -->
+      <section class="container mb-5">
+        <div class="row">
+          <div class="col-lg-7 order-lg-1 order-2">
+            <h2 class="steps-title mb-3">STEPS</h2>
+            <p class="steps-description">
+              <span style="font-size: 1.25rem">G</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                uiding You on Your Global Financial Success Journey Through
+                Customized & Personalized Financial Consulting Services.
+              </span>
+              <span style="font-size: 1.25rem">A</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                chieve Your Goals with Data-Driven Expertise and Secure Your
+                Financial Future, Successfully Navigating the Ever-Changing Finance
+              </span>
+              <span style="font-size: 1.25rem">G</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                uiding You on Your Global Financial Success Journey Throu
+              </span>
+              <span style="font-size: 1.25rem">A</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                chieve Your Goals with Data-Driven Expertise and Secure Your
+                Financial F
+              </span>
+              <br />
+              Guiding You on Your Global Financial Success Journey Through
+              Customized & Personalized Financial Consulting Services. Achieve Your
+              Goals with Data-Driven Expertise and Secure Your Financial Future,
+              Successfully Navigating the Ever-Changing Finance Guiding You on Your
+              Global Financial Success Journey ThrouAchieve Your Goals with
+              Data-Driven Expertise and Secure Your Financial F
+            </p>
+          </div>
+          <div class="col-lg-5 order-lg-2 order-1 mb-4 mb-lg-0">
+            <div class="steps-blue-box mx-auto w-100"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps Section 3 -->
+      <section class="container mb-5">
+        <div class="row">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <div class="steps-blue-box mx-auto w-100"></div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="steps-title mb-3">STEPS</h2>
+            <p class="steps-description">
+              <span style="font-size: 1.25rem">G</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                uiding You on Your Global Financial Success Journey Through
+                Customized & Personalized Financial Consulting Services.
+              </span>
+              <span style="font-size: 1.25rem">A</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                chieve Your Goals with Data-Driven Expertise and Secure Your
+                Financial Future, Successfully Navigating the Ever-Changing Finance
+              </span>
+              <span style="font-size: 1.25rem">G</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                uiding You on Your Global Financial Success Journey Throu
+              </span>
+              <span style="font-size: 1.25rem">A</span>
+              <span style="font-size: 1.25rem; text-transform: lowercase">
+                chieve Your Goals with Data-Driven Expertise and Secure Your
+                Financial F
+              </span>
+              <br />
+              Guiding You on Your Global Financial Success Journey Through
+              Customized & Personalized Financial Consulting Services. Achieve Your
+              Goals with Data-Driven Expertise and Secure Your Financial Future,
+              Successfully Navigating the Ever-Changing Finance Guiding You on Your
+              Global Financial Success Journey ThrouAchieve Your Goals with
+              Data-Driven Expertise and Secure Your Financial F
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="container mb-5 mt-5">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="stats-number">7+</div>
+            <div class="stats-label mt-2">Years of Experience</div>
+          </div>
+          <div class="col-md-4">
+            <div class="stats-number">50+</div>
+            <div class="stats-label mt-2">Projects completed</div>
+          </div>
+          <div class="col-md-4">
+            <div class="stats-number">30+</div>
+            <div class="stats-label mt-2">Happy Clients</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="bg-white py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-lg border-light rounded-3">
+              <div class="card-body p-4 p-md-5">
+                <div class="text-center mb-4">
+                  <h2 class="fw-bold mb-2" style="color: #1c244b;">Get a Quote Now</h2>
+                  <p class="text-secondary">Get a Quote Immediately Upon Form Submission</p>
+                </div>
+                <form>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                      <input type="email" class="form-control" placeholder="Email adress">
+                    </div>
+                    <div class="col-md-6">
+                      <input type="tel" class="form-control" placeholder="Phone">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Order details" id="orderDetails" style="height: 100px"></textarea>
+                      <label for="orderDetails">Order details</label>
+                      <div class="form-text">
+                        Submit Your Order Information - Item Name, Decoration Size,
+                        Quantity, Due Date and any other details
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <button type="button" class="btn btn-secondary">
+                      <span style="font-weight: 500;">Upload</span> file
+                    </button>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-dark py-3 rounded-pill" style="font-size: 1.4375rem; font-weight: 600;">
+                      Send Request
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="company-name mb-3">JUSTJAVA</div>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4c6315c49def9d70a4f5a7871f1cb2186b1cf634?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Company Logo" class="img-fluid mb-3" />
+            <div class="d-flex gap-3">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ac0401922224c788fab65c710690003e0730b2fe?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social Media Icon" style="width: 1.75rem;" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7bb88e5505a15b56c7e15570cd384b3fe99e96f3?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social Media Icon" style="width: 1.75rem;" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5616bb5a9510186bb25e5ea2c911426245070942?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social Media Icon" style="width: 1.75rem;" />
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/02b57113606506bf81ed189ede5f996e6eede2e0?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social Media Icon" style="width: 1.75rem;" />
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h3 class="footer-column-title mb-3">Company</h3>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="footer-link">About us</a>
+              <a href="#" class="footer-link">Blog</a>
+              <a href="#" class="footer-link">Contact us</a>
+              <a href="#" class="footer-link">Pricing</a>
+              <a href="#" class="footer-link">Testimonials</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+            <h3 class="footer-column-title mb-3">Support</h3>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="footer-link">Help center</a>
+              <a href="#" class="footer-link">Terms of service</a>
+              <a href="#" class="footer-link">Legal</a>
+              <a href="#" class="footer-link">Privacy policy</a>
+              <a href="#" class="footer-link">Status</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <h3 class="footer-column-title mb-3">Stay up to date</h3>
+            <div class="input-group">
+              <input type="email" class="form-control form-control-sm bg-white" placeholder="Your email address">
+              <button class="btn btn-outline-secondary btn-sm" type="button">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/90b3317bd46491f5f21c4ca0b8d29f760ce51688?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Submit Icon" style="width: 1rem;" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

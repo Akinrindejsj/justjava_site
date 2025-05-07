@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Resources and Insights</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+      background-color: rgba(8, 14, 40, 1);
+      color: white;
+    }
+    
+    .blog-intro-heading {
+      color: #a6a6a6;
+      font-weight: 600;
+      letter-spacing: -0.06em;
+    }
+    
+    .blog-intro-text {
+      color: #a2a0a6;
+    }
+    
+    .insights-square {
+      border-radius: 0.375rem 0.0625rem 0.375rem 0.0625rem;
+      background-color: rgba(90, 201, 247, 1);
+      width: 6.875rem;
+      height: 6.875rem;
+    }
+    
+    .insights-label {
+      border-radius: 0.3125rem;
+      background-color: rgba(89, 201, 247, 0.15);
+      padding: 0.3125rem 1.125rem;
+      color: rgba(8, 14, 40, 1);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .insights-divider {
+      border-color: rgba(89, 201, 247, 1);
+      border-style: solid;
+      border-width: 0.125rem;
+      width: 7.375rem;
+      height: 0.125rem;
+    }
+    
+    .blog-post-card {
+      box-shadow: 0px 10.568px 14.09px -3.523px rgba(16, 24, 40, 0.08),
+        0px 3.523px 5.284px -1.761px rgba(16, 24, 40, 0.03);
+      min-height: 31.9375rem;
+    }
+    
+    .blog-post-image {
+      background-color: rgba(175, 175, 175, 1);
+      min-height: 13.5625rem;
+    }
+    
+    .blog-post-category {
+      color: #6941c6;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .blog-post-title {
+      color: #101828;
+      font-weight: 600;
+    }
+    
+    .blog-post-description {
+      color: #667085;
+      font-size: 0.875rem;
+    }
+    
+    .blog-post-author-name {
+      color: #101828;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+    
+    .blog-post-date {
+      color: #667085;
+      font-size: 0.75rem;
+    }
+    
+    .contact-btn {
+      background-color: #59c9f7;
+      color: #080e28;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+    }
+    
+    .contact-form-wrapper {
+      border-radius: 0.635rem;
+      border: 0.07rem solid #f1f1f1;
+      box-shadow: 0px 0.847rem 1.694rem 0px rgba(13, 16, 45, 0.1),
+        0px 1.764rem 3.529rem -0.847rem rgba(13, 16, 45, 0.1);
+    }
+    
+    .contact-form-title {
+      color: #1c244b;
+      font-weight: 600;
+    }
+    
+    .contact-form-subtitle {
+      color: #172640;
+    }
+    
+    .contact-form-input {
+      border-radius: 0.4235rem;
+      border: 0.07rem solid #c5cad1;
+      padding: 1rem 1.125rem;
+      color: #576675;
+    }
+    
+    .contact-form-textarea-wrapper {
+      border-radius: 0.5646rem;
+      border: 0.07rem solid #c5cad1;
+      padding: 1.1875rem 1.125rem;
+    }
+    
+    .contact-form-textarea-label {
+      color: #576675;
+      font-weight: 500;
+    }
+    
+    .contact-form-textarea-placeholder {
+      color: #a1a8b4;
+    }
+    
+    .upload-button-text {
+      border-radius: 0.2823rem;
+      background-color: #e8e9ea;
+      color: #555e6d;
+      padding: 0.75rem 1rem;
+    }
+    
+    .send-request-btn {
+      border-radius: 1.75rem;
+      background-color: rgba(46, 48, 52, 1);
+      color: white;
+      font-weight: 600;
+      padding: 0.8125rem 1.0625rem;
+    }
+    
+    .footer {
+      background-color: black;
+    }
+    
+    .footer-company-name {
+      font-weight: 900;
+    }
+    
+    .footer-col-title {
+      color: white;
+      font-weight: 600;
+    }
+    
+    .footer-col-link {
+      color: #f5f7fa;
+      text-decoration: none;
+      display: block;
+      margin-top: 0.6875rem;
+    }
+    
+    .footer-col-link:first-child {
+      margin-top: 0;
+    }
+    
+    .footer-newsletter-input {
+      border-radius: 0.4444rem;
+      background-color: white;
+      padding: 0.5625rem 0.625rem;
+    }
+    
+    .footer-newsletter-placeholder {
+      color: #d9dbe1;
+    }
+    
+    .load-more-btn-base {
+      border-radius: 0.44rem;
+      border: 0.055rem solid #f9f5ff;
+      box-shadow: 0px 0.055rem 0.11rem 0px rgba(16, 24, 40, 0.05);
+      background-color: #f9f5ff;
+      color: #6941c6;
+      padding: 0.6875rem 1.125rem;
+    }
+  </style>
+</head>
+<body>
+    <header class="header-section">
+  <main class="blog container">
+    <!-- Header section -->
+    <nav class="navbar navbar-expand-lg py-3 rounded-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b3c4760f9b5ae35ab5809b9b12a74131eae8d48?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="JUSTJAVA Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon light "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: white;"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Our Story</a></li>
+                  <li><a class="dropdown-item" href="#">Team</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Fintech</a></li>
+                  <li><a class="dropdown-item" href="#">Legaltech</a></li>
+                  <li><a class="dropdown-item" href="#">Automation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="case_study.html">Case Study</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="insights.html">Insights</a>
+              </li>
+            </ul>
+            <button class="btn btn-info text-dark px-4">CONTACT US</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Insights section -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-md-3 mb-4 mb-md-0">
+          <div class="d-flex align-items-center">
+            <div class="insights-square me-3"></div>
+            <div class="insights-label">INSIGHTS</div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="d-flex flex-wrap align-items-center gap-5">
+            <div class="insights-divider"></div>
+            <div class="search-field flex-grow-1">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <button class="btn btn-outline-secondary" type="button">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f51d8dc1392ec07e19f3f360c52e8612929afdba?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Search" style="width: 1.25rem;">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog intro section -->
+    <section class="container text-center my-5 py-4">
+      <h1 class="blog-intro-heading display-4 mb-3">Resources and insights</h1>
+      <p class="blog-intro-text fs-4">The latest industry news, interviews, technologies, and resources.</p>
+    </section>
+
+    <!-- Blog posts section -->
+    <section class="container my-5 py-4">
+      <!-- First row of blog posts -->
+      <div class="row g-4 mb-5">
+        <!-- Blog post 1 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Design</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">UX review presentations</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d5761a3577f3cfd45124739fe11771c19920c247?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">How do you create compelling presentations that wow your colleagues and impress your managers?</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/62ccf959206deb989597fa141808fd4b83f413ee?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Olivia Rhye" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Olivia Rhye</div>
+                  <div class="blog-post-date">20 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog post 2 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Product</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">Migrating to Linear 101</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/857484ebc0f2a268a7f50ec91836a250d0f619f7?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5a56c63477bf67e97355950e822ab42c500f7fce?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Phoenix Baker" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Phoenix Baker</div>
+                  <div class="blog-post-date">19 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog post 3 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Software Engineering</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">Building your API Stack</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b91f8273fb0917002e40023cdeefd3fa315f5a50?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ee449fee8ee7c6179706a2b6e89b333889543aa?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Lana Steiner" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Lana Steiner</div>
+                  <div class="blog-post-date">18 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Second row of blog posts -->
+      <div class="row g-4 mb-5">
+        <!-- Blog post 4 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Management</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">Bill Walsh leadership lessons</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/73a523fe2eb79f71d960cae28b377df143770c2c?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3aaaf8883f85f7e7d499c114c7a6d4176cd9433?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Alec Whitten" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Alec Whitten</div>
+                  <div class="blog-post-date">17 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog post 5 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Product</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">PM mental models</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/097c98c43e505492cd745b5463af89ea5ed3f15a?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">Mental models are simple expressions of complex processes or relationships.</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b0192132609fab92ff182ba212e13f4c785128bc?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Demi Wilkinson" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Demi WIlkinson</div>
+                  <div class="blog-post-date">16 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog post 6 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Design</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">What is Wireframing?</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/deaca7d720fc0b7d8233b04c239cac3fdb691f54?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">Introduction to Wireframing and its Principles. Learn from the best in the industry.</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/79617f24bd451a5aa8b7417313ea712705cb5a86?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Candice Wu" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Candice Wu</div>
+                  <div class="blog-post-date">15 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Third row of blog posts -->
+      <div class="row g-4 mb-5">
+        <!-- Blog post 7 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Design</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">How collaboration makes us better designers</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f60e4e04f12138477eb73cf990226f7edbb78fc2?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">Collaboration can make our teams stronger, and our individual designs better.</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9822ee98661b2579c2d691e416244723d5e23515?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Natali Craig" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Natali Craig</div>
+                  <div class="blog-post-date">14 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog post 8 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Product</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">Our top 10 Javascript frameworks to use</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3ef121b9d0e7eb9a097ec4f18101292c4423675?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">JavaScript frameworks make development easy with extensive features and functionalities.</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a0018f0dc6322a86d2b04e63db6d4e70035c52b0?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Drew Cano" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Drew Cano</div>
+                  <div class="blog-post-date">13 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog post 9 -->
+        <div class="col-md-4">
+          <article class="blog-post-card card h-100 p-3">
+            <div class="blog-post-image card-img-top rounded"></div>
+            <div class="card-body d-flex flex-column">
+              <div class="mb-3">
+                <div class="blog-post-category mb-2">Customer Success</div>
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="blog-post-title card-title mb-0">Podcast: Creating a better CX Community</h3>
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ee021133d1be70f778d6cedf2aa923638e1b1b9e?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Icon" style="width: 1.3125rem;">
+                </div>
+                <p class="blog-post-description card-text">Starting a community doesn't need to be complicated, but how do you get started?</p>
+              </div>
+              <div class="mt-auto d-flex align-items-center">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b68d12d10f5fcb0e8c3fff7c1493b552b85ffe4d?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Orlando Diggs" style="width: 2.1875rem; height: 2.1875rem;" class="rounded-circle me-2">
+                <div>
+                  <div class="blog-post-author-name">Orlando Diggs</div>
+                  <div class="blog-post-date">12 Jan 2022</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Load more button -->
+      <div class="text-center my-5">
+        <button class="load-more-btn-base border-0">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d7f9b60687051103bf76d99d7d661377c182f6b1?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Load more" style="width: 1.0625rem;" class="me-2">
+          <span>Load more</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contact form section -->
+    <section class="bg-white py-5">
+      <div class="container">
+        <div class="contact-form-wrapper p-4 p-md-5 mx-auto" style="max-width: 900px;">
+          <form class="contact-form">
+            <div class="text-center mb-5">
+              <h2 class="contact-form-title mb-3">Get a Quote Now</h2>
+              <p class="contact-form-subtitle">Get a Quote Immediately Upon Form Submission</p>
+            </div>
+            
+            <div class="mb-4">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <input type="text" placeholder="First name" class="contact-form-input form-control">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" placeholder="Last name" class="contact-form-input form-control">
+                </div>
+              </div>
+              
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <input type="email" placeholder="Email adress" class="contact-form-input form-control">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" placeholder="Phone" class="contact-form-input form-control">
+                </div>
+              </div>
+              
+              <div class="contact-form-textarea-wrapper mb-3">
+                <label class="contact-form-textarea-label d-block mb-2">Order details</label>
+                <p class="contact-form-textarea-placeholder mb-0">Submit Your Order Information - Item Name, Decoration Size, Quantity, Due Date and any other details</p>
+              </div>
+              
+              <div class="upload-button">
+                <button type="button" class="upload-button-text border-0">
+                  <span style="font-weight: 500; color: rgba(85, 94, 109, 1);">Upload</span>
+                  <span style="font-weight: 500;">file</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <button type="submit" class="send-request-btn btn px-4 py-3">Send Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="footer-company">
+              <h2 class="footer-company-name mb-3">JUSTJAVA</h2>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f6dc1dfaf8ad149bfe8be4ca3cb1ad2fa73cac3?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Company description" class="footer-company-logo mb-3 w-100">
+              <div class="footer-social d-flex gap-3">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/014047f30762782f1c9beb798fc6b0e916c70566?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social media" style="width: 1.75rem;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/811a5b1db6790c71efe0a47c802cd5533aa389e4?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social media" style="width: 1.75rem;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa46e06be30572b21d09c268f09b9e191d513823?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social media" style="width: 1.75rem;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fefeeaae504f695229eb487c6cbbe9d71a287717?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Social media" style="width: 1.75rem;">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 col-md-12">
+            <div class="footer-links row">
+              <div class="footer-col col-md-4 mb-4 mb-md-0">
+                <h3 class="footer-col-title mb-3">Company</h3>
+                <nav class="footer-col-links">
+                  <a href="#" class="footer-col-link">About us</a>
+                  <a href="#" class="footer-col-link">Blog</a>
+                  <a href="#" class="footer-col-link">Contact us</a>
+                  <a href="#" class="footer-col-link">Pricing</a>
+                  <a href="#" class="footer-col-link">Testimonials</a>
+                </nav>
+              </div>
+              
+              <div class="footer-col col-md-4 mb-4 mb-md-0">
+                <h3 class="footer-col-title mb-3">Support</h3>
+                <nav class="footer-col-links">
+                  <a href="#" class="footer-col-link">Help center</a>
+                  <a href="#" class="footer-col-link">Terms of service</a>
+                  <a href="#" class="footer-col-link">Legal</a>
+                  <a href="#" class="footer-col-link">Privacy policy</a>
+                  <a href="#" class="footer-col-link">Status</a>
+                </nav>
+              </div>
+              
+              <div class="footer-newsletter col-md-4">
+                <h3 class="footer-newsletter-title mb-3">Stay up to date</h3>
+                <div class="footer-newsletter-form">
+                  <div class="footer-newsletter-input d-flex justify-content-between align-items-center">
+                    <span class="footer-newsletter-placeholder">Your email address</span>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a921f2a0d99d391342706bfaa4b4da618219bfd?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="Submit" style="width: 1rem;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Website</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles that can't be achieved with Bootstrap alone */
+
+    .bg-company-primary {
+      background-color: rgba(8, 14, 40, 1);
+    }
+
+    .bg-company-blue {
+      background-color: #59c9f7;
+    }
+
+    .bg-company-blue-light {
+      background-color: rgba(89, 201, 247, 0.15);
+    }
+
+    .text-company-gray {
+      color: rgba(87, 87, 87, 1);
+    }
+
+    .text-company-light {
+      color: #efefef;
+    }
+
+    .text-company-stats {
+      color: rgba(243, 243, 243, 1);
+    }
+
+    .text-company-stats-label {
+      color: rgba(201, 185, 185, 1);
+    }
+
+    .border-company-blue {
+      border-color: rgba(89, 201, 247, 1) !important;
+    }
+
+    .about-icon {
+      border-radius: 6px 1px 6px 1px;
+      background-color: rgba(90, 201, 247, 1);
+      width: 110px;
+      height: 110px;
+    }
+
+    .about-divider {
+      border-style: solid;
+      border-width: 2px;
+      width: 118px;
+      height: 2px;
+    }
+
+    .carousel-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(196, 196, 196, 1);
+    }
+
+    .carousel-indicator-active {
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .upload-btn {
+      background-color: #e8e9ea;
+      border-radius: 4.517px;
+      color: #555e6d;
+    }
+
+    .company-description {
+      font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+      font-weight: 500;
+      line-height: 35px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 991px) {
+      .about-header {
+        margin-top: 40px;
+      }
+
+      .company-description {
+        margin-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="bg-company-primary">
+    <!-- Header Section -->
+    <header class="container py-4 header-section">
+        <nav class="navbar navbar-expand-lg py-3 rounded-4">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b3c4760f9b5ae35ab5809b9b12a74131eae8d48?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="JUSTJAVA Logo" height="40">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon light "></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: white;"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Our Story</a></li>
+                      <li><a class="dropdown-item" href="#">Team</a></li>
+                      <li><a class="dropdown-item" href="#">Careers</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Services
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Fintech</a></li>
+                      <li><a class="dropdown-item" href="#">Legaltech</a></li>
+                      <li><a class="dropdown-item" href="#">Automation</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="case_study.html">Case Study</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style="color: white;" href="insights.html">Insights</a>
+                  </li>
+                </ul>
+                <button class="btn btn-info text-dark px-4">CONTACT US</button>
+              </div>
+            </div>
+          </nav>
+  
+      <div class="d-flex align-items-center mt-5">
+        <div class="d-flex">
+          <div class="about-icon"></div>
+          <div class="bg-company-blue-light rounded-2 align-self-start mt-4 px-3 py-1 text-uppercase fw-semibold">ABOUT US</div>
+        </div>
+        <div class="about-divider border-company-blue my-auto ms-4"></div>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="container position-relative z-3 py-3 my-4">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="fs-1 fw-bold text-white">About Our Company</h1>
+          <p class="text-secondary mt-3">Discover the journey of our company</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/33d56e32e44aff03575e31d7b3adc2a0f639a011?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Company Image" class="img-fluid">
+        </div>
+      </div>
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1c07e1cd834e6889302f32d602fa56168b2f729?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Divider" class="position-absolute bottom-0 start-0 end-0 w-100" style="height: 0;">
+    </section>
+
+    <!-- Company Description -->
+    <article class="container company-description text-company-gray mt-5">
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Financ
+      <br>
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Finance Guiding You on Your Global Financial
+      Success Journey Through Customized & Personalized Financial Consulting
+      Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+      Financial Future, Successfully Navigating the Ever-Changing Finance Guiding
+      You on Your Global Financial Success Journey Through Customized onsulting
+      Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+      Financial Future, Successfully Navigating the Ever-
+    </article>
+
+    <!-- Carousel Section -->
+    <section class="container my-5 py-3">
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-4">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/def68f391862b83bbd419b2ae63dfd9fb2d20665?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Gallery Image 1" class="img-fluid rounded-2">
+        </div>
+        <div class="col-md-4">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/deb4530508654ecf51e4633087a072fa5d28e0ed?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Gallery Image 2" class="img-fluid rounded-2">
+        </div>
+        <div class="col-md-4">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc66e16f69df914be26b699bcb04c3621dddccc9?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Gallery Image 3" class="img-fluid rounded-2">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center gap-2 mt-3 py-3">
+        <div class="carousel-indicator"></div>
+        <div class="carousel-indicator carousel-indicator-active"></div>
+        <div class="carousel-indicator"></div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="container my-4">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="d-flex align-items-center">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e305386e1facf4d9630cb1a8ac03679206a4cf0?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Members Icon" class="me-3" style="width: 48px;">
+            <div>
+              <div class="text-company-stats fs-3 fw-bold">2,245,341</div>
+              <div class="text-company-stats-label">Members</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex align-items-center">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/04b4d1be20831c09c761b2ba80a94e775a60f078?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Clubs Icon" class="me-3" style="width: 48px;">
+            <div>
+              <div class="text-company-stats fs-3 fw-bold">46,328</div>
+              <div class="text-company-stats-label">Clubs</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex align-items-center">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a86c2b3c22e98cf2ab9dd0d87aba23074c5028f?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Event Bookings Icon" class="me-3" style="width: 48px;">
+            <div>
+              <div class="text-company-stats fs-3 fw-bold">828,867</div>
+              <div class="text-company-stats-label">Event Bookings</div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="d-flex align-items-center">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/141c6e10c842d5cf4107e2d65d80b37ba9db1da2?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Payments Icon" class="me-3" style="width: 48px;">
+            <div>
+              <div class="text-company-stats fs-3 fw-bold">1,926,436</div>
+              <div class="text-company-stats-label">Payments</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Second Description -->
+    <article class="container company-description text-company-gray mt-4 ms-2">
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Financ
+      <br>
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Finance Guiding You on Your Global Financial
+      Success Journey Through Customized & Personalized Financial Consulting
+      Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+      Financial Future, Successfully Navigating the Ever-Changing Finance Guiding
+      You on Your Global Financial Success Journey Through Customized onsulting
+      Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+      Financial Future, Successfully Navigating the Ever-
+    </article>
+
+    <!-- Form Section -->
+    <section class="mt-5">
+      <div class="bg-white py-5">
+        <div class="container">
+          <div class="card border-light shadow-lg">
+            <div class="card-body p-4 p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                  <div class="text-center mb-4">
+                    <h2 class="fw-semibold" style="color: #1c244b;">Get a Quote Now</h2>
+                    <p class="fs-5" style="color: #172640;">Get a Quote Immediately Upon Form Submission</p>
+                  </div>
+
+                  <form>
+                    <div class="row mb-3">
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <input type="text" class="form-control" placeholder="First name">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Last name">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <input type="email" class="form-control" placeholder="Email adress">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="tel" class="form-control" placeholder="Phone">
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <div class="form-control p-3">
+                        <label class="form-label mb-1" style="color: #576675;">Order details</label>
+                        <div class="text-muted" style="color: #a1a8b4;">
+                          Submit Your Order Information - Item Name, Decoration Size,
+                          Quantity, Due Date and any other details
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-4">
+                      <button type="button" class="btn upload-btn py-2 px-3">
+                        <span style="font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-weight: 500; color: rgba(85, 94, 109, 1);">Upload</span>
+                        <span style="font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif; font-weight: 500;">file</span>
+                      </button>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-dark rounded-pill py-3 px-4 fw-semibold fs-5" style="min-width: 250px;">Send Request</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="bg-black text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 mb-4 mb-lg-0">
+              <h4 class="fw-bold mb-3">JUSTJAVA</h4>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f6dc1dfaf8ad149bfe8be4ca3cb1ad2fa73cac3?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Company Logo" class="img-fluid mb-3">
+              <div class="d-flex gap-3">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/014047f30762782f1c9beb798fc6b0e916c70566?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Social Media" style="width: 28px;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/811a5b1db6790c71efe0a47c802cd5533aa389e4?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Social Media" style="width: 29px;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa46e06be30572b21d09c268f09b9e191d513823?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Social Media" style="width: 28px;">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fefeeaae504f695229eb487c6cbbe9d71a287717?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Social Media" style="width: 28px;">
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                  <h5 class="mb-3">Company</h5>
+                  <ul class="list-unstyled small">
+                    <li class="mb-2">About us</li>
+                    <li class="mb-2">Blog</li>
+                    <li class="mb-2">Contact us</li>
+                    <li class="mb-2">Pricing</li>
+                    <li>Testimonials</li>
+                  </ul>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0">
+                  <h5 class="mb-3">Support</h5>
+                  <ul class="list-unstyled small">
+                    <li class="mb-2">Help center</li>
+                    <li class="mb-2">Terms of service</li>
+                    <li class="mb-2">Legal</li>
+                    <li class="mb-2">Privacy policy</li>
+                    <li>Status</li>
+                  </ul>
+                </div>
+
+                <div class="col-md-4">
+                  <h5 class="mb-3">Stay up to date</h5>
+                  <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Your email address">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb12e4d4d2a2bda0d5fb3d1137eac15fb8f0fef3?placeholderIfAbsent=true&apiKey=7945a381510541a3a21291ce28414075" alt="Submit" style="width: 16px;">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
