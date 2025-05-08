@@ -15,19 +15,38 @@
       .nav-item-text {
         color: #EFEFEF;
       }
+      .dropdown-menu{
+        z-index: 200000 !important;
+      }
   
       .dropdown-icon {
         width: 24px;
       }
-  
-      /* Remove dropdown hover functionality */
-      .dropdown:hover .dropdown-menu {
-        display: none;
-      }
-      .dropdown.show .dropdown-menu {
-        display: block;
-      }
-  
+      /* ========== DROPDOWN FIXES ========== */
+/* Fix dropdown z-index and positioning */
+.navbar {
+  position: relative;
+  z-index: 1050;
+}
+
+.dropdown-menu {
+  z-index: 1051;
+  position: absolute;
+}
+
+/* Remove overflow constraints that clip dropdowns */
+body, html, 
+.container, .container-fluid,
+.header-section {
+  overflow: visible !important;
+}
+
+/* Ensure header creates proper stacking context */
+.header-section {
+  position: relative;
+  z-index: 1040;
+}
+/* ========== END DROPDOWN FIXES ========== */
       /* Hero section */
       .hero-content {
         height: auto;

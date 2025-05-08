@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fintech Landing Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+:root {
+  --primary-color: #59c9f7;
+  --primary-light: rgba(89, 201, 247, 0.15);
+  --dark-bg: rgba(8, 14, 40, 1);
+  --text-light: rgba(206, 201, 201, 1);
+  --text-gray: rgba(87, 87, 87, 1);
+  --border-color: rgba(213, 221, 221, 1);
+}
+
+
+/* Main Container */
+.fintech {
+  background-color: var(--dark-bg);
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Navigation */
+.navigation {
+  border-radius: 32px;
+}
+
+.logo {
+  aspect-ratio: 4;
+  object-fit: contain;
+  width: 132px;
+}
+
+.dropdown-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-button {
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: var(--dark-bg);
+  width: 135px;
+  padding: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Hero Content */
+.hero-content {
+  gap: 24px;
+  font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-square {
+  border-radius: 6px 1px 6px 1px;
+  background-color: var(--primary-color);
+  width: 110px;
+  height: 110px;
+}
+
+.badge-text {
+  border-radius: 5px;
+  background-color: var(--primary-light);
+  margin-top: 39px;
+  padding: 5px 18px;
+  color: var(--dark-bg);
+}
+
+.badge-line {
+  border-color: var(--primary-color);
+  border-style: solid;
+  border-width: 2px;
+  width: 118px;
+  height: 2px;
+  align-self: center;
+}
+
+.hero-title {
+  color: var(--text-light);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 51px;
+}
+
+.hero-description {
+  color: var(--text-gray);
+  font-size: 20px;
+  font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.explore-button {
+  border-radius: 3px;
+  border: 2px solid var(--border-color);
+  width: 405px;
+  max-width: 100%;
+  padding: 18px 70px;
+  font-size: 18px;
+  color: var(--text-light);
+  font-weight: 600;
+  background: transparent;
+}
+
+@media (max-width: 991px) {
+  .explore-button {
+    padding: 18px 20px;
+  }
+}
+
+/* Form Section */
+.form-section {
+  margin-top: 98px;
+}
+
+@media (max-width: 991px) {
+  .form-section {
+    margin-top: 40px;
+  }
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 95px 80px;
+}
+
+@media (max-width: 991px) {
+  .form-container {
+    padding: 95px 20px;
+  }
+}
+
+.form-card {
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0px 14px 27px 0px rgba(13, 16, 45, 0.1),
+    0px 28px 56px -14px rgba(13, 16, 45, 0.1);
+  background-color: #fff;
+  padding: 45px 35px;
+}
+
+@media (max-width: 991px) {
+  .form-card {
+    padding: 45px 20px;
+  }
+}
+
+.form-title {
+  color: #1c244b;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.form-subtitle {
+  color: #172640;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.form-input {
+  color: #576675;
+  border-radius: 7px;
+  border: 1px solid #c5cad1;
+  padding: 16px 18px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.textarea-container {
+  width: 100%;
+  border-radius: 9px;
+  border: 1px solid #c5cad1;
+  background-color: #fff;
+  padding: 19px 18px;
+}
+
+.textarea-label {
+  color: #576675;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.form-textarea {
+  color: #a1a8b4;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #555e6d;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.upload-text, .upload-file {
+  color: #555e6d;
+  border-radius: 4.5px;
+  padding: 12px 16px;
+  background-color: #e8e9ea;
+  font-weight: 500;
+}
+
+.submit-button {
+  width: 316px;
+  border-radius: 28px;
+  background-color: rgba(46, 48, 52, 1);
+  min-height: 59px;
+  padding: 13px 17px;
+  font-size: 23px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  padding: 57px 0;
+}
+
+.company-name {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.company-image {
+  width: 100%;
+  max-width: 262px;
+  margin-top: 16px;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 16px;
+  gap: 14px;
+}
+
+.social-link img {
+  width: 28px;
+}
+
+.column-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.footer-list {
+  margin-top: 21px;
+  font-size: 12px;
+  color: #f5f7fa;
+  font-weight: 400;
+  line-height: 1;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-link {
+  color: #f5f7fa;
+  text-decoration: none;
+  display: block;
+  margin-top: 11px;
+}
+
+.email-field {
+  margin-top: 21px;
+  font-size: 12px;
+  color: #d9dbe1;
+}
+
+.email-input-container {
+  border-radius: 7px;
+  padding: 9px 10px;
+  background-color: #fff;
+}
+
+.email-placeholder {
+  color: #d9dbe1;
+}
+
+.email-icon {
+  width: 16px;
+}
+
+  </style>
+</head>
+<body>
+<main class="fintech p-3" >
+  <section class="hero-section container-fluid">
+    <header class="navigation row align-items-center justify-content-between py-3 mx-0">
+      <nav class="navbar navbar-expand-lg py-3 rounded-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b3c4760f9b5ae35ab5809b9b12a74131eae8d48?placeholderIfAbsent=true&apiKey=1f5ccc357cb84b31a87942ade61483f8" alt="JUSTJAVA Logo" height="40">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon light "></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">OUR COMPANY</a></li>
+                  <li><a class="dropdown-item" href="technologies.html">TECHNOLIGIES</a></li>
+                  <li><a class="dropdown-item" href="industies_focus.html">INDUSTRY FOCUS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: white;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">MORDERNIZATION & REFACTORING</a></li>
+                  <li><a class="dropdown-item" href="technologies.html">AUTOMATION</a></li>
+                  <li><a class="dropdown-item" href="industies_focus.html">MAINTENANCE & SUPPORT</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="case_study.html">Case Study</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="insights.html">Insights</a>
+              </li>
+            </ul>
+            <button class="btn btn-info text-dark px-4">CONTACT US</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero-content d-flex align-items-center mt-5">
+      <div class="badge-container d-flex">
+        <div class="badge-square"></div>
+        <span class="badge-text align-self-start">FINTECH</span>
+      </div>
+      <div class="badge-line"></div>
+    </div>
+
+    <h1 class="hero-title mt-5 ms-4">
+      Transforming Finances With Strategic Wealth Management
+    </h1>
+
+    <p class="hero-description mt-5 text-center">
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Financ
+      <br />
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Finance Guiding You on Your Global Financial
+      Success Journey Through Customized & Personalized Financial Consulting
+      Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+      Financial Future, Successfully Navigating the Ever-Changing Finance
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Finance Guiding You on Your Global Financial
+      Success Journey Through Customized & Personalized Financial Consulting
+      Services. Achieve Your Goals with Data-Driven Expertise and Secure Your
+      Financial Future, Successfully Navigating the Ever-Changing Finance
+      Guiding You on Your Global Financial Success Journey Through Customized &
+      Personalized Financial Consulting Services. Achieve Your Goals with
+      Data-Driven Expertise and Secure Your Financial Future, Successfully
+      Navigating the Ever-Changing Finance Guiding You on Your Global Financial
+      Success
+    </p>
+
+    <div class="d-flex justify-content-end mt-5">
+      <button class="explore-button btn">
+        Explore Case studies
+      </button>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <div class="form-container container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-card">
+            <div class="form-content">
+              <div class="form-header text-center mb-4">
+                <h2 class="form-title">Get a Quote Now</h2>
+                <p class="form-subtitle">Get a Quote Immediately Upon Form Submission</p>
+              </div>
+
+              <form class="contact-form">
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <input type="text" class="form-control form-input" placeholder="First name">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control form-input" placeholder="Last name">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <input type="email" class="form-control form-input" placeholder="Email adress">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control form-input" placeholder="Phone">
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <div class="textarea-container">
+                      <label for="order-details" class="textarea-label">Order details</label>
+                      <textarea id="order-details" class="form-textarea" placeholder="Submit Your Order Information - Item Name, Decoration Size, Quantity, Due Date and any other details"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12">
+                    <div class="upload-button">
+                      <span class="upload-text">Upload</span>
+                      <span class="upload-file">file</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="d-flex justify-content-center mt-4">
+                <button class="submit-button btn">Send Request</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <div class="company-section">
+              <h3 class="company-name">JUSTJAVA</h3>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2669fc185c70d7ca0cd630be206bc1958605e7d0?placeholderIfAbsent=true&apiKey=d807134c143f4b028d00c8f1d0f25a20" class="company-image" alt="Company Image" />
+              <div class="social-links">
+                <a href="#" class="social-link"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/014047f30762782f1c9beb798fc6b0e916c70566?placeholderIfAbsent=true&apiKey=d807134c143f4b028d00c8f1d0f25a20" alt="Social Media" /></a>
+                <a href="#" class="social-link"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/811a5b1db6790c71efe0a47c802cd5533aa389e4?placeholderIfAbsent=true&apiKey=d807134c143f4b028d00c8f1d0f25a20" alt="Social Media" /></a>
+                <a href="#" class="social-link"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa46e06be30572b21d09c268f09b9e191d513823?placeholderIfAbsent=true&apiKey=d807134c143f4b028d00c8f1d0f25a20" alt="Social Media" /></a>
+                <a href="#" class="social-link"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fefeeaae504f695229eb487c6cbbe9d71a287717?placeholderIfAbsent=true&apiKey=d807134c143f4b028d00c8f1d0f25a20" alt="Social Media" /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="row footer-links">
+              <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                <div class="footer-column">
+                  <h4 class="column-title">Company</h4>
+                  <ul class="footer-list">
+                    <li><a href="#" class="footer-link">About us</a></li>
+                    <li><a href="#" class="footer-link">Blog</a></li>
+                    <li><a href="#" class="footer-link">Contact us</a></li>
+                    <li><a href="#" class="footer-link">Pricing</a></li>
+                    <li><a href="#" class="footer-link">Testimonials</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+                <div class="footer-column">
+                  <h4 class="column-title">Support</h4>
+                  <ul class="footer-list">
+                    <li><a href="#" class="footer-link">Help center</a></li>
+                    <li><a href="#" class="footer-link">Terms of service</a></li>
+                    <li><a href="#" class="footer-link">Legal</a></li>
+                    <li><a href="#" class="footer-link">Privacy policy</a></li>
+                    <li><a href="#" class="footer-link">Status</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <div class="footer-column">
+                  <h4 class="column-title">Stay up to date</h4>
+                  <div class="email-field">
+                    <div class="email-input-container d-flex justify-content-between">
+                      <span class="email-placeholder">Your email address</span>
+                      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5bcc77967d75361abb191c77b16c21bface69a8?placeholderIfAbsent=true&apiKey=d807134c143f4b028d00c8f1d0f25a20" class="email-icon" alt="Email Icon" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+</main>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
